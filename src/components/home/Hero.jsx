@@ -56,20 +56,21 @@ export default function Hero() {
         </div>
 
         {/* Dots */}
-        <div className="absolute bottom-6 w-full flex justify-center gap-3 z-10">
+        <div className="absolute bottom-4 md:bottom-6 w-full flex justify-center gap-2 md:gap-3 z-10">
           {slides.map((_, i) => (
             <button
               key={i}
               onClick={() => setIndex(i)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                index === i ? "bg-white scale-125" : "bg-white/50"
-              }`}
+              className={`
+                rounded-full transition-all
+                w-1.5 h-1.5 md:w-2.5 md:h-2.5
+                ${index === i ? "bg-white scale-125" : "bg-white/50"}
+            `}
             />
           ))}
         </div>
       </div>
 
-      {/* ===== ABOUT SECTION ===== */}
       {/* ===== ABOUT SECTION ===== */}
       <div className="relative py-20 overflow-hidden bg-gradient-to-r from-slate-100 to-blue-100">
         {/* Background Image */}

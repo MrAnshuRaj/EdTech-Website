@@ -13,7 +13,6 @@ export default function DoubtBot() {
     setMessages([...messages, { from: "user", text: input }]);
     setInput("");
 
-    // fake teacher reply
     setTimeout(() => {
       setMessages((prev) => [
         ...prev,
@@ -24,17 +23,36 @@ export default function DoubtBot() {
 
   return (
     <>
-      {/* BOT ICON */}
+      {/* BOT ICON — SAME POSITION & ICON */}
       <button
         onClick={() => setOpen(true)}
-        className="fixed left-4 top-3/4 -translate-y-1/2 bg-black text-white w-18 h-18 rounded-full shadow-xl flex items-center justify-center text-4xl z-50 hover:scale-105 transition"
+        className="
+          fixed left-4 top-3/4 -translate-y-1/2
+          bg-black text-white
+          w-14 h-14 md:w-18 md:h-18
+          rounded-full shadow-xl
+          flex items-center justify-center
+          text-2xl md:text-4xl
+          z-50 hover:scale-105 transition
+        "
       >
         🤷‍♂️
       </button>
 
       {/* CHAT BOX */}
       {open && (
-        <div className="fixed left-20 top-1/2 -translate-y-1/2 w-[340px] h-[420px] bg-white rounded-xl shadow-2xl z-50 flex flex-col overflow-hidden">
+        <div
+          className="
+            fixed z-50 bg-white shadow-2xl flex flex-col overflow-hidden
+
+            /* MOBILE */
+            bottom-0 left-0 w-full h-[70vh] rounded-t-2xl
+
+            /* DESKTOP */
+            md:left-20 md:top-1/2 md:-translate-y-1/2
+            md:w-[340px] md:h-[420px] md:rounded-xl
+          "
+        >
           {/* Header */}
           <div className="bg-black text-white px-4 py-3 flex justify-between items-center">
             <span>Doubt Chat</span>
@@ -67,7 +85,7 @@ export default function DoubtBot() {
               <input type="file" className="hidden" />
             </label>
 
-            {/* Voice (UI only) */}
+            {/* Voice */}
             <button className="text-xl">🎤</button>
 
             {/* Text */}
@@ -75,13 +93,13 @@ export default function DoubtBot() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Type your doubt..."
-              className="flex-1 border rounded px-3 py-1 text-sm outline-none"
+              className="flex-1 border rounded px-3 py-2 text-sm outline-none"
             />
 
             {/* Send */}
             <button
               onClick={sendMessage}
-              className="bg-black text-white px-3 py-1 rounded"
+              className="bg-black text-white px-3 py-2 rounded"
             >
               ➤
             </button>

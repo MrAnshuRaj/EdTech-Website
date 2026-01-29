@@ -86,14 +86,14 @@ export default function Hero() {
           {/* Left */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Bharat’s Trusted & Affordable <br />
-              Educational Platform
+              Build Strong Foundations. <br />
+              Achieve Higher Ranks.
             </h2>
 
             <p className="mt-4 text-gray-700 leading-relaxed">
-              Learn with expert teachers through live classes, recorded
-              sessions, doubt support and test series — all at affordable
-              prices.
+              Learn from IIT-trained educators with focused live classes, smart
+              practice tools, and exam-oriented test series designed for real
+              results.
             </p>
 
             <div className="mt-8 flex gap-4">

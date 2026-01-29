@@ -8,10 +8,11 @@ import TestSeries from "./pages/TestSeries";
 import Store from "./pages/Store";
 import About from "./pages/About";
 import Auth from "./pages/Auth";
-
+import ScrollToTop from "./components/ScrollToTop";
 export default function App() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
